@@ -141,6 +141,7 @@ h1.title {
 		background: url(../bg-a.jpg);
 		color: #841010;
 		z-index: 99999;
+		    box-shadow: 0 1px 13px 2px;
 	}
 	.menu-btn {
 		display: none;
