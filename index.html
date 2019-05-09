@@ -52,7 +52,7 @@
 			</div>
 		</div>
 		
-		<div class="ceremony-section" style="background-image: url('bg.jpg'); background-position: bottom center;">
+		<div class="tilak-section" style="background-image: url('bg.jpg'); background-position: bottom center;">
 			<h1 class="title" style="margin-top: 0; padding-top: 50px;">Tilak Ceremony</h1>
 			<div class="container center" style="color: #9635ad;">We request the pleasure of your company to celebrate the Tilak Ceremony</div>
 			<div class="date" style="color: #e3004d;">at Agrasen Bhavan, Pali road</div>
@@ -78,14 +78,17 @@
 			var body = $('html','body');
 			var $aboutTop = $('.about-section').offset().top;
 			var $ceremonyTop = $('.ceremony-section').offset().top;
-			//var $galleryTop = $('#coverflow').offset().top;
+			var $galleryTop = $('.tilak-section').offset().top;
 			var $headerHeight = $('.mobile-menu-box').outerHeight();
 			console.log ("Header Height: " + $headerHeight);
 			console.log($aboutTop);
 			console.log($ceremonyTop);
-			//console.log($galleryTop);
+			console.log($galleryTop);
 			
 			$('#about,#about-m').click(function() {
+				$('html, body').animate({scrollTop: $aboutTop}, 700);
+			});
+			$('#gallery,#gallery-m').click(function() {
 				$('html, body').animate({scrollTop: $aboutTop}, 700);
 			});
 			
@@ -106,7 +109,7 @@
 			});	
 			
 			
-			/*$(window).scroll(function() {
+			$(window).scroll(function() {
 				if($(window).scrollTop() >= $aboutTop - $headerHeight  && $(window).scrollTop() < $galleryTop - $headerHeight) {
 					$('#menu-heading').html('About');
 					console.log('about section');
@@ -114,14 +117,14 @@
 					$('#menu-heading').html('Home');
 					console.log('home section');
 				} else if ($(window).scrollTop() >= $galleryTop - $headerHeight && $(window).scrollTop() < $ceremonyTop - $headerHeight) {
-					$('#menu-heading').html('Gallery');
+					$('#menu-heading').html('Tilak Ceremony');
 					console.log('gallery section');
 				} else if ($(window).scrollTop() >= $ceremonyTop - $headerHeight) {
-					$('#menu-heading').html('Ceremony');
+					$('#menu-heading').html('Wedding Ceremony');
 					console.log('ceremony section');
 				}
 				
-			});*/
+			});
 			
 			
 	</script>
